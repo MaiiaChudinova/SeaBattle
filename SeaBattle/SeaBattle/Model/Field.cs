@@ -1,9 +1,11 @@
-﻿namespace SeaBattle
+﻿using System;
+
+namespace SeaBattle
 {
     /// <summary>
     /// A class representing single player's battlefield
     /// </summary>
-    public class Board
+    public class Field
     {
         #region Private fields
 
@@ -13,7 +15,7 @@
 
         #region Constructor
 
-        public Board()
+        public Field()
         {
             field = new FieldCell[fieldSize, fieldSize];
 
@@ -26,6 +28,28 @@
         #endregion
 
         #region Public properties
+
+        public FieldCell this[int i, int j]
+        {
+            get
+            {
+                if (i < 0 || i >= fieldSize ||
+                    j < 0 || j >= fieldSize)
+                    throw new IndexOutOfRangeException($"Index ({i},{j}) out of range = 0..{fieldSize - 1}");
+
+                return field[i, j];
+            }
+
+            set
+            {
+                if (i < 0 || i >= fieldSize ||
+                    j < 0 || j >= fieldSize)
+                    throw new IndexOutOfRangeException($"Index ({i},{j}) out of range = 0..{fieldSize - 1}");
+
+                field[i, j] = value;
+            }
+        }
+
         #endregion
 
         #region Public methods

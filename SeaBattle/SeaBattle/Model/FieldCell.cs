@@ -19,23 +19,22 @@
         /// <summary>
         /// Cell's state (from a player's point of view)
         /// </summary>
-        public FieldCellType state;
+        public FieldCellState state;
 
-        #region Constructors
-        public FieldCell(int x, int y, FieldCellType state)
+        #region Constructor
+
+        /// <summary>
+        /// Constructor used "by default"
+        /// </summary>
+        /// <param name="x">Horizontal coordinate (starting from left)</param>
+        /// <param name="y">Vertical coordinate (starting from top)</param>
+        public FieldCell(int x, int y, FieldCellState state = FieldCellState.Uncheked)
         {
             this.x = x;
             this.y = y;
             this.state = state;
         }
-
-        /// <summary>
-        /// Constructor used "by default" (when initializing)
-        /// </summary>
-        /// <param name="x">Horizontal coordinate (starting from left)</param>
-        /// <param name="y">Vertical coordinate (starting from top)</param>
-        public FieldCell(int x, int y) : this(x, y, FieldCellType.Uncheked) { }
-
+        
         #endregion
     }
 }

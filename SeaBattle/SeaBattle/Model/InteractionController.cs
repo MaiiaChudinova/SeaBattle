@@ -1,22 +1,23 @@
 ﻿namespace SeaBattle
 {
     /// <summary>
-    /// A class controlling the game process logic
+    /// A class responsible for logic interaction between objects
+    /// inhrited from <see cref="PlayerController"/>
     /// </summary>
-    public class GameController
+    public class InteractionController
     {
         #region Private fields
 
-        private Board player1View;
-        private Board player2View;
+        private PlayerController p1;
+        private PlayerController p2;
 
         private class ShipDistribution
         {
-            private Ship[,] putShips;
+            private Ship[,] putShip;
 
             public ShipDistribution() 
             {
-                putShips = new Ship[Board.fieldSize, Board.fieldSize];
+                putShip = new Ship[Field.fieldSize, Field.fieldSize];
             }
 
             /// <summary>
@@ -30,27 +31,20 @@
             {
                 if (alignHorizontally)
                     for (int j = 0; j < sh.Size; ++j)
-                        putShips[x, j] = sh;
+                        putShip[x, j] = sh;
                 else
                     for (int i = 0; i < sh.Size; ++i)
-                        putShips[i, y] = sh;
+                        putShip[i, y] = sh;
             }
 
-            public bool ContainsShip(int x, int y) => putShips[x, y] != null;
+            public bool ContainsShip(int x, int y) => putShip[x, y] != null;
         }
 
-        private ShipDistribution player1Ship;
-        private ShipDistribution player2Ship;
 
         #endregion
 
         #region Constructor
 
-        public GameController()
-        {
-            player1Ship = new ShipDistribution();
-            player2Ship = new ShipDistribution();
-        }
 
         #endregion
 
