@@ -32,5 +32,12 @@
         public int Size { get => (int)type; }
 
         #endregion
+
+        #region Public methods
+
+        public void TakeShot() => --lives;
+
+        #endregion
+
     }
 }

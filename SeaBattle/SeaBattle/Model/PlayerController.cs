@@ -7,31 +7,34 @@
     {
         protected Field myField;
         protected Field enemyField;
+        protected InteractionController controller;
 
         #region Abstract methods
 
         /// <summary>
-        /// Player should make a move based on his/her view of enemy's field
+        /// Player makes a move based on his/her view of enemy's field
         /// </summary>
         /// <returns> Tuple of coordinates to shoot on enemy's field </returns>
-        public abstract (int x, int y) makeMove();
+        public abstract (int x, int y) MakeMove();
 
         #endregion
 
         #region Protected methods
 
-        protected bool HitMakesSense(int x, int y) => enemyField[x, y].state == FieldCellState.Uncheked;
-
         #endregion
 
         #region Public methods
 
-        public bool IsCellShot(int x, int y) => myField[x, y].state == FieldCellState.Undamaged;
-
-
-        public void TakeHit(int x, int y)
+        public void SendMove(int x, int y)
         {
-            
+            controller.AcceptMove(this, x, y);
+        }
+
+        public void ReceiveUpdate(int x, int y, FieldCellState newState, PlayerController victim)
+        {
+            // плохо, возможно стоит избежать создания нового объекта путем исправления структуры на класс
+            if (this != victim) enemyField[x, y] = new FieldCell(x, y, newState);
+            else myField[x, y] = new FieldCell(x, y, newState);
         }
 
         #endregion

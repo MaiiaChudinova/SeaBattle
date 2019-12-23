@@ -73,12 +73,13 @@
     <Compile Include="Model\AIPlayerController.cs" />
     <Compile Include="Model\Field.cs" />
     <Compile Include="Model\FieldCell.cs" />
-    <Compile Include="Model\FieldCellType.cs" />
+    <Compile Include="Model\FieldCellState.cs" />
     <Compile Include="Model\InteractionController.cs" />
     <Compile Include="Model\HumanPlayerController.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\PlayerController.cs" />
     <Compile Include="Model\Ship.cs" />
+    <Compile Include="Model\ShipDistribution.cs" />
     <Compile Include="Model\ShipType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
