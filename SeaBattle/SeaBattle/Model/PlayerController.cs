@@ -9,6 +9,18 @@
         protected Field enemyField;
         protected InteractionController controller;
 
+        #region Constructor
+
+        protected PlayerController(InteractionController controller, ShipDistribution myShip)
+        {
+            myField = new Field();
+            enemyField = new Field();
+            this.controller = controller;
+            myShip = new ShipDistribution();
+        }
+
+        #endregion
+
         #region Abstract methods
 
         /// <summary>
@@ -35,6 +47,23 @@
             // плохо, возможно стоит избежать создания нового объекта путем исправления структуры на класс
             if (this != victim) enemyField[x, y] = new FieldCell(x, y, newState);
             else myField[x, y] = new FieldCell(x, y, newState);
+        }
+
+
+
+        // OMG CODE SO UGLY...
+        public void PlaceShip(int x, int y, bool alignHorizontally, Ship ship, ShipDistribution myShip)
+        {
+            if (alignHorizontally)
+            {
+                for (int j = 0; j < ship.Size; ++j)
+                    myShip[x, y + j] = ship;
+            }
+            else
+            {
+                for (int i = 0; i < ship.Size; ++i)
+                    myShip[x + i, y] = ship;
+            }
         }
 
         #endregion
