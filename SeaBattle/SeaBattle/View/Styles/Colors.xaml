@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SeaBattle">
+
+    <!-- White & Black -->
+
+    <SolidColorBrush x:Key="WhiteBrush" Color="White" />
+    <SolidColorBrush x:Key="BlackBrush" Color="Black" />
+
+    <!-- Blue -->
+
+    <Color x:Key="ExtraSuperLight">#e6f0ff</Color>
+    <SolidColorBrush x:Key="ExtraSuperLightBrush" Color="{StaticResource ExtraSuperLight}" />
+
+    <Color x:Key="SuperLight">#cce0ff</Color>
+    <SolidColorBrush x:Key="SuperLightBrush" Color="{StaticResource SuperLight}" />
+
+    <Color x:Key="ExtraLight">#99c2ff</Color>
+    <SolidColorBrush x:Key="ExtraLightBrush" Color="{StaticResource ExtraLight}" />
+
+    <Color x:Key="Light">#4d94ff</Color>
+    <SolidColorBrush x:Key="LightBrush" Color="{StaticResource Light}" />
+
+    <Color x:Key="MediumLight">#3385ff</Color>
+    <SolidColorBrush x:Key="MediumLightBrush" Color="{StaticResource MediumLight}" />
+
+    <Color x:Key="Medium">#0066ff</Color>
+    <SolidColorBrush x:Key="MediumBrush" Color="{StaticResource Medium}" />
+
+    <Color x:Key="Dark">#0052cc</Color>
+    <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource Dark}" />
+
+    <Color x:Key="ExtraDark">#003d99</Color>
+    <SolidColorBrush x:Key="ExtraDarkBrush" Color="{StaticResource ExtraDark}" />
+
+    <Color x:Key="SuperDark">#002966</Color>
+    <SolidColorBrush x:Key="SuperDarkBrush" Color="{StaticResource SuperDark}" />
+
+    <!-- Other -->
+
+    <!-- These gray's actually have some blue shade -->
+    <Color x:Key="Gray">#79a6d2</Color>
+    <SolidColorBrush x:Key="GrayBrush" Color="{StaticResource Gray}" />
+
+    <Color x:Key="DarkGray">#4080bf</Color>
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="{StaticResource DarkGray}" />
+
+</ResourceDictionary>

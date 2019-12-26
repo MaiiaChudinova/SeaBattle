@@ -4,7 +4,7 @@ namespace SeaBattle
 {
     public class HumanPlayerController : PlayerController
     {
-        public override (int x, int y) makeMove()
+        public override (int x, int y) MakeMove()
         {
             throw new NotImplementedException();
         }

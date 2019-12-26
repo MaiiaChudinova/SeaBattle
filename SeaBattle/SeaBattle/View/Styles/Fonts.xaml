@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SeaBattle"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <FontFamily x:Key="VinqueRegular">pack://application;,,,/View/Fonts/#Vinque Rg-Regular</FontFamily>
+    <FontFamily x:Key="GoodDogNewRegular">pack://application;,,,/View/Fonts/#GoodDog New Regular</FontFamily>
+
+    <!-- Font sizes -->
+    <system:Double x:Key="FontSizeRegular">20</system:Double>
+    <system:Double x:Key="FontSizeSmall">14</system:Double>
+    <system:Double x:Key="FontSizeLarge">30</system:Double>
+    
+</ResourceDictionary>
