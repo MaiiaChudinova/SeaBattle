@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace SeaBattle
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для GamePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GamePage : Page
     {
-        public MainWindow()
+        public GamePage()
         {
             InitializeComponent();
-            DataContext = new SampleDataContext();
         }
     }
 }

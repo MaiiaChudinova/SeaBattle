@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SeaBattle.View
+namespace SeaBattle
 {
     /// <summary>
-    /// Логика взаимодействия для GameWindow.xaml
+    /// Логика взаимодействия для WelcomePage.xaml
     /// </summary>
-    public partial class GameWindow : Window
+    public partial class WelcomePage : Page
     {
-        public GameWindow()
+        public WelcomePage()
         {
             InitializeComponent();
         }

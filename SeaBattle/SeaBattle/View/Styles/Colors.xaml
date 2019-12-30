@@ -7,6 +7,23 @@
     <SolidColorBrush x:Key="WhiteBrush" Color="White" />
     <SolidColorBrush x:Key="BlackBrush" Color="Black" />
 
+    <!-- FieldCell state colors -->
+
+    <Color x:Key="DamagedShipColor">#ff3300</Color>
+    <SolidColorBrush x:Key="DamagedShipColorBrush" Color="{StaticResource DamagedShipColor}" />
+
+    <Color x:Key="SeaColor">#809fff</Color>
+    <SolidColorBrush x:Key="SeaColorBrush" Color="{StaticResource SeaColor}" />
+
+    <Color x:Key="UnchekedCellColor">#ffffff</Color>
+    <SolidColorBrush x:Key="UnchekedCellColorBrush" Color="{StaticResource UnchekedCellColor}" />
+
+    <Color x:Key="KilledShipColor">#1a1a1a</Color>
+    <SolidColorBrush x:Key="KilledShipColorBrush" Color="{StaticResource KilledShipColor}" />
+
+    <Color x:Key="UndamagedShipColor">#00e600</Color>
+    <SolidColorBrush x:Key="UndamagedShipColorBrush" Color="{StaticResource UndamagedShipColor}" />
+
     <!-- Blue -->
 
     <Color x:Key="ExtraSuperLight">#e6f0ff</Color>

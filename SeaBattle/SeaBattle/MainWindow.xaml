@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Welcome to the Seabattle!" Height="450" Width="800"
         Icon="View/Images/anchor.png">
-    <Grid>
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -22,5 +22,10 @@
                    Foreground="{StaticResource DarkBrush}">
             Welcome to the Seabattle!
         </TextBlock>
-    </Grid>
+    </Grid>-->
+
+    <Border Background="White">
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" Background="Transparent" />
+    </Border>
+
 </Window>
