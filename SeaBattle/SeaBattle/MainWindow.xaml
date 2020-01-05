@@ -7,25 +7,9 @@
         mc:Ignorable="d"
         Title="Welcome to the Seabattle!" Height="450" Width="800"
         Icon="View/Images/anchor.png">
-    <!--<Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <TextBlock FontSize="{StaticResource FontSizeLarge}"
-                   Foreground="{StaticResource DarkBrush}"
-                   FontFamily="{StaticResource VinqueRegular}">
-            Welcome to the Seabattle!
-        </TextBlock>
-        <TextBlock Grid.Row="1"
-                   FontSize="{StaticResource FontSizeLarge}"
-                   Foreground="{StaticResource DarkBrush}">
-            Welcome to the Seabattle!
-        </TextBlock>
-    </Grid>-->
 
     <Border Background="White">
-        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" Background="Transparent" />
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
     </Border>
 
 </Window>
