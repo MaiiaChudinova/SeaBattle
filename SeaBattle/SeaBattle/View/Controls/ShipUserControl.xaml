@@ -9,26 +9,10 @@
 
     <StackPanel Width="{Binding MaxShipWidth}"
                 Height="{Binding CellSize}"
-                Orientation="Horizontal">
+                Orientation="Horizontal"
+                Name="Ship">
 
-        <Button Width="{Binding CellSize}"
-                Height="{Binding CellSize}"
-                Style="{StaticResource FieldCellButton}"/>
-
-
-        <Button Width="{Binding CellSize}"
-                Height="{Binding CellSize}"
-                Style="{StaticResource FieldCellButton}"/>
-
-
-        <Button Width="{Binding CellSize}"
-                Height="{Binding CellSize}"
-                Style="{StaticResource FieldCellButton}"/>
-
-
-        <Button Width="{Binding CellSize}"
-                Height="{Binding CellSize}"
-                Style="{StaticResource FieldCellButton}"/>
+        
 
     </StackPanel>
     

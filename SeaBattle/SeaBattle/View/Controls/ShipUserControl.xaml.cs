@@ -20,10 +20,27 @@ namespace SeaBattle
     /// </summary>
     public partial class ShipUserControl : UserControl
     {
+        private static int curSize = 4;
+
         public ShipUserControl()
         {
             InitializeComponent();
             DataContext = new SampleDataContext();
+
+
+            const int cellSize = 30;
+
+            for (int i = 0; i < curSize; ++i)
+            {
+                Button b = new Button();
+
+                b.Height = cellSize;
+                b.Width = cellSize;
+                b.Style = FindResource("FieldCellButton") as Style;
+                Ship.Children.Add(b);
+            }
+            --curSize;
+
         }
     }
 }

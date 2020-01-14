@@ -27,7 +27,6 @@ namespace SeaBattle
                     return new ShipAllocationPage();
 
                 default:
-                    Debugger.Break();
                     return null;
             }
         }
