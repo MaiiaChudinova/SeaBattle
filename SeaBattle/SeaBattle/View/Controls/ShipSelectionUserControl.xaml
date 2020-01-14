@@ -21,10 +21,10 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <local:ShipUserControl Grid.Row="0"/>
-        <local:ShipUserControl Grid.Row="1"/>
-        <local:ShipUserControl Grid.Row="2"/>
-        <local:ShipUserControl Grid.Row="3"/>
+        <local:ShipUserControl Size="4" Grid.Row="0"/>
+        <local:ShipUserControl Size="3" Grid.Row="1"/>
+        <local:ShipUserControl Size="2" Grid.Row="2"/>
+        <local:ShipUserControl Size="1" Grid.Row="3"/>
 
         <TextBlock Grid.Row="0" 
                    Grid.Column="1" 
