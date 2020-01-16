@@ -9,10 +9,18 @@
 
     <!-- Field cell button -->
     <Style TargetType="{x:Type Button}" x:Key="FieldCellButton">
-        <Setter Property="Background" Value="Red" />
+        <Setter Property="Background" Value="Gray" />
         <Setter Property="BorderThickness" Value="1"/>
 
         
+    </Style>
+
+    <!-- Ship cell button -->
+    <Style TargetType="{x:Type Button}" x:Key="ShipCellButton">
+        <Setter Property="Background" Value="Blue" />
+        <Setter Property="BorderThickness" Value="1"/>
+
+
     </Style>
 
 

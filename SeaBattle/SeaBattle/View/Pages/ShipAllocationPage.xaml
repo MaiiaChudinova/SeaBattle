@@ -8,7 +8,73 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ShipAllocationPage">
 
-    <Grid>
-        
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <TextBlock FontSize="{StaticResource FontSizeLarge}"
+                           Padding="10" TextAlignment="Justify">
+                    Put your ship:
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <TextBlock FontSize="{StaticResource FontSizeLarge}"
+                           Padding="10" TextAlignment="Justify">
+                    Available ship:
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <local:FieldUserControl/>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <local:ShipSelectionUserControl/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel HorizontalAlignment="Center" 
+                        Orientation="Horizontal">
+
+                <Button Width="100"
+                    Padding="5"
+                    Margin="5">
+                    Auto
+                </Button>
+
+                <Button Width="100"
+                    Padding="5"
+                    Margin="5">
+                    Reset
+                </Button>
+
+                <Button Width="100"
+                    Padding="5"
+                    Margin="5">
+                    Ready
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Page>

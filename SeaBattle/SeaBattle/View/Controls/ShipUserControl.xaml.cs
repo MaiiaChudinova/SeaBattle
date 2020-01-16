@@ -47,7 +47,7 @@ namespace SeaBattle
                     Button b = new Button();
                     b.Height = cellSize;
                     b.Width = cellSize;
-                    b.Style = FindResource("FieldCellButton") as Style;
+                    b.Style = FindResource("ShipCellButton") as Style;
                     Ship.Children.Add(b);
                 }
             }

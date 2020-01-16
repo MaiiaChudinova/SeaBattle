@@ -5,7 +5,7 @@
         /// <summary>
         /// The current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Welcome;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Game;
 
         public int MaxShipWidth { get; set; } = 120;
 

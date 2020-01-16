@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeaBattle"
         mc:Ignorable="d"
-        Title="Welcome to the Seabattle!" Height="450" Width="800"
+        Title="Seabattle v1.0" Height="450" Width="800"
+        MinWidth="760" 
+        MinHeight="500" 
         Icon="View/Images/anchor.png">
+        <!-- MinWidth and MinHeight 
+             should be bound and depend on
+             the current page. 
+             Current version perhaps should be bound too. -->
 
     <Border Background="White">
         <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
