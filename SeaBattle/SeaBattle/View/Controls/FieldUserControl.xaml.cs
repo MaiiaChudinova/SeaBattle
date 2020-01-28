@@ -21,17 +21,12 @@ namespace SeaBattle
 
                 for (int j = 0; j < fieldSize; ++j)
                 {
-                    //Rectangle r = new Rectangle();
-
                     // 1) identify rectangle's/button's name
-                    // 2) create this specific button style (fieldcellbutton style)
 
                     Button b = new Button();
 
                     b.Height = cellSize;
                     b.Width = cellSize;
-                    //b.Background = Brushes.White;
-                    //b.BorderBrush = Brushes.Black;
                     b.Style = FindResource("FieldCellButton") as Style;
                     sp.Children.Add(b);
                     

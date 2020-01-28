@@ -10,8 +10,17 @@
 
     <Grid Background="White">
 
-        <TextBlock>
-            
+        <TextBlock x:Name="WinnerTextBlock">
+
+        </TextBlock>
+
+        <!--
+        Congrats or oopsy, you lost
+        <Image />
+        -->
+
+        <TextBlock x:Name="StatisticsTextBlock">
+
         </TextBlock>
         
     </Grid>

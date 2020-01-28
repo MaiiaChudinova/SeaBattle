@@ -55,6 +55,12 @@
 
     <!-- Other -->
 
+    <SolidColorBrush x:Key="RegularButtonColorBrush" Color="{StaticResource Dark}" />
+    <SolidColorBrush x:Key="HoveredRegularButtonColorBrush" Color="{StaticResource Medium}" /> 
+    <SolidColorBrush x:Key="PressedRegularButtonColorBrush" Color="{StaticResource MediumLight}" />
+    <SolidColorBrush x:Key="RegularButtonTextColorBrush" Color="White" />
+    <SolidColorBrush x:Key="MainWindowBackgroundColorBrush" Color="White" />
+
     <!-- These gray's actually have some blue shade -->
     <Color x:Key="Gray">#79a6d2</Color>
     <SolidColorBrush x:Key="GrayBrush" Color="{StaticResource Gray}" />

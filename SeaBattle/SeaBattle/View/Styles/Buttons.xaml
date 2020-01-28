@@ -9,19 +9,24 @@
 
     <!-- Field cell button -->
     <Style TargetType="{x:Type Button}" x:Key="FieldCellButton">
-        <Setter Property="Background" Value="Gray" />
+        <Setter Property="Background" Value="{StaticResource UnchekedCellColorBrush}" />
         <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Black"/>
 
-        
     </Style>
 
     <!-- Ship cell button -->
     <Style TargetType="{x:Type Button}" x:Key="ShipCellButton">
-        <Setter Property="Background" Value="Blue" />
+        <Setter Property="Background" Value="{StaticResource UndamagedShipColorBrush}" />
         <Setter Property="BorderThickness" Value="1"/>
-
+        <Setter Property="BorderBrush" Value="Black"/>
 
     </Style>
-
+    
+    <!-- Regular button -->
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource RegularButtonColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource RegularButtonTextColorBrush}" />
+    </Style>
 
 </ResourceDictionary>
