@@ -15,7 +15,7 @@ namespace SeaBattle
 
         #region Constructor
 
-        public Player(string name)
+        public Player(string name = "")
         {
             this.name = name;
         }

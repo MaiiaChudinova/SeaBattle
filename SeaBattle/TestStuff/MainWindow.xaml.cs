@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SeaBattle
+namespace TestStuff
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +23,7 @@ namespace SeaBattle
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Test();
         }
     }
 }

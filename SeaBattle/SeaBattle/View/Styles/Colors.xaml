@@ -2,11 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:SeaBattle">
 
-    <!-- White & Black -->
-
-    <SolidColorBrush x:Key="WhiteBrush" Color="White" />
-    <SolidColorBrush x:Key="BlackBrush" Color="Black" />
-
     <!-- FieldCell state colors -->
 
     <Color x:Key="DamagedShipColor">#ff3300</Color>
@@ -56,8 +51,9 @@
     <!-- Other -->
 
     <SolidColorBrush x:Key="RegularButtonColorBrush" Color="{StaticResource Dark}" />
-    <SolidColorBrush x:Key="HoveredRegularButtonColorBrush" Color="{StaticResource Medium}" /> 
+    <SolidColorBrush x:Key="HoveredRegularButtonColorBrush" Color="{StaticResource Medium}" />
     <SolidColorBrush x:Key="PressedRegularButtonColorBrush" Color="{StaticResource MediumLight}" />
+    <SolidColorBrush x:Key="PressedRegularButtonTextColorBrush" Color="{StaticResource ExtraDark}" />
     <SolidColorBrush x:Key="RegularButtonTextColorBrush" Color="White" />
     <SolidColorBrush x:Key="MainWindowBackgroundColorBrush" Color="White" />
 
