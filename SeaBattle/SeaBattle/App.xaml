@@ -1,9 +1,9 @@
 ﻿<Application x:Class="SeaBattle.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SeaBattle"
+             xmlns:viewmodels="clr-namespace:SeaBattle.ViewModels"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <viewmodels:ViewModelLocator x:Key="ViewModelLocator" />
     </Application.Resources>
 </Application>

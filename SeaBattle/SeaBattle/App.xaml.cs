@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeaBattle.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,11 @@ namespace SeaBattle
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            ViewModelLocator.InitializeLocator();
+
+            base.OnStartup(e);
+        }
     }
 }
