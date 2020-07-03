@@ -17,6 +17,9 @@ namespace SeaBattle.ValueConverters
                 case PageType.Welcome:
                     return new WelcomePage();
 
+                case PageType.ShipAllocation:
+                    return new ShipAllocationPage();
+
                 default:
                     return null;
             }

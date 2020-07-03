@@ -10,12 +10,8 @@
       Title="LoginPage">
 
     <StackPanel Background="White">
-        <TextBlock HorizontalAlignment="Center" Text="Hello, I'm a login page!" />
-        <Button Command="{Binding ChangePage}" Content="Go to welcome page" />
-
-        <!--
-        <TextBox Text="{Binding LogText, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" />
-        <Button Command="{Binding SendLog}" Content="Send log" />
-        -->
+        <TextBox x:Name="Name" Text="{Binding CurrentUserName}"/>
+        <Button Command="{Binding LoginCommand}" 
+                Content="Login" />
     </StackPanel>
 </Page>

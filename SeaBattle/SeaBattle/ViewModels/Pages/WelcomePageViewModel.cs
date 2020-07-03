@@ -1,12 +1,11 @@
 ﻿using DevExpress.Mvvm;
-using SeaBattle.Services;
-using SeaBattle.Views.Pages;
+using SeaBattle.Models;
+using SeaBattle.Services.Events;
+using SeaBattle.Services.Messages;
+using SeaBattle.Services.Paging;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -18,8 +17,7 @@ namespace SeaBattle.ViewModels.Pages
         private readonly EventBusService _eventBus;
         private readonly MessageBusService _messageBus;
 
-        public ObservableCollection<string> Logs { get; set; } = new ObservableCollection<string>();
-
+        public UserModel CurrentUser { get; set; }
 
         public WelcomePageViewModel(PageService pageService, EventBusService eventBus, MessageBusService messageBus)
         {
@@ -27,24 +25,22 @@ namespace SeaBattle.ViewModels.Pages
             _eventBus = eventBus;
             _messageBus = messageBus;
 
-            _eventBus.Subscribe<LeaveFromLoginPageEvent>(async @event => Debug.WriteLine($"You left from login page"));
+            _eventBus.Subscribe<SuccessfulLoginEvent>(async @event => Debug.WriteLine($"User has successfully logged in"));
 
-            _messageBus.Receive<TextMessage>(this, async message =>
+            _messageBus.Receive<LoginInfoMessage>(this, async message =>
             {
-                await Task.Delay(3000);
-                Logs.Add(message.Text);
+                CurrentUser = message.User;
             });
-            _messageBus.Receive<TextMessage>(new object(), async message => Logs.Add(message.Text));
         }
 
-        public ICommand AppendLog => new DelegateCommand(() =>
+        public ICommand LogoutCommand => new DelegateCommand(() =>
         {
-            Logs.Add(Guid.NewGuid().ToString());
+            _pageService.ChangePage(PageType.Login);
         });
 
-        public ICommand ChangePage => new DelegateCommand(() =>
+        public ICommand PlayCommand => new DelegateCommand(() =>
         {
-            _pageService.ChangePage(new LoginPage());
+            _pageService.ChangePage(PageType.ShipAllocation);
         });
     }
 }

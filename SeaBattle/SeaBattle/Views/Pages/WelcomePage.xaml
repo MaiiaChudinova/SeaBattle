@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:SeaBattle.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       DataContext="{Binding WelcomePageViewModel, Source={StaticResource ViewModelLocator}}"
@@ -11,10 +10,13 @@
 
     <Grid>
         <StackPanel Background="White">
-            <TextBlock HorizontalAlignment="Center" Text="Hello, I'm a welcome page!" />
-            <Button Command="{Binding ChangePage}" Content="Go to login page" />
-            <Button Command="{Binding AppendLog}" Content="AppendLog" />
-            <ListView Grid.Row="1" ItemsSource="{Binding Logs}" />
+            <Button Command="{Binding LogoutCommand}" Content="Logout" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Welcome, " />
+                <Label Content="{Binding CurrentUser.Name}" />
+                <Label Content="!" />
+            </StackPanel>
+            <Button Command="{Binding PlayCommand}" Content="Play!" />
         </StackPanel>
 
     </Grid>

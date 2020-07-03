@@ -82,23 +82,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Services\EventBusService.cs" />
-    <Compile Include="Services\EventSubscriber.cs" />
-    <Compile Include="Services\IEvent.cs" />
-    <Compile Include="Services\IMessage.cs" />
-    <Compile Include="Services\LeaveFromLoginPageEvent.cs" />
-    <Compile Include="Services\MessageBusService.cs" />
-    <Compile Include="Services\MessageSubscriber.cs" />
-    <Compile Include="Services\PageService.cs" />
-    <Compile Include="Services\TextMessage.cs" />
+    <Compile Include="Models\FieldCellState.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Services\Events\EventBusService.cs" />
+    <Compile Include="Services\Events\EventSubscriber.cs" />
+    <Compile Include="Services\Events\IEvent.cs" />
+    <Compile Include="Services\Messages\IMessage.cs" />
+    <Compile Include="Services\Events\SuccessfulLoginEvent.cs" />
+    <Compile Include="Services\Messages\LoginInfoMessage.cs" />
+    <Compile Include="Services\Messages\MessageBusService.cs" />
+    <Compile Include="Services\Messages\MessageSubscriber.cs" />
+    <Compile Include="Services\Paging\PageService.cs" />
+    <Compile Include="Services\Messages\TextMessage.cs" />
+    <Compile Include="ValueConverters\FieldCellStateToColorBrushConverter.cs" />
+    <Compile Include="ViewModels\FieldRowViewModel.cs" />
+    <Compile Include="ViewModels\FieldViewModel.cs" />
     <Compile Include="ViewModels\Pages\LoginPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ShipAllocationPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\WelcomePageViewModel.cs" />
+    <Compile Include="Views\Controls\FieldRowUserControl.xaml.cs">
+      <DependentUpon>FieldRowUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\FieldUserControl.xaml.cs">
+      <DependentUpon>FieldUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ShipAllocationPage.xaml.cs">
+      <DependentUpon>ShipAllocationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\Controls\FieldRowUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\FieldUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,6 +141,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\ShipAllocationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

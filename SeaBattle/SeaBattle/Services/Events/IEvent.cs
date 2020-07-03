@@ -1,4 +1,4 @@
-﻿namespace SeaBattle.Services
+﻿namespace SeaBattle.Services.Events
 {
     public interface IEvent
     {

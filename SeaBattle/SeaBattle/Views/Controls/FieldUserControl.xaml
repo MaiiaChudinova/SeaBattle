@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="SeaBattle.Views.Controls.FieldUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:local="clr-namespace:SeaBattle.Views.Controls"
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext="{Binding FieldViewModel, Source={StaticResource ViewModelLocator}}"
+             >
+
+    <StackPanel>
+        <local:FieldRowUserControl x:Name="Row0" />
+        <local:FieldRowUserControl x:Name="Row1" />
+        <local:FieldRowUserControl x:Name="Row2" />
+        <local:FieldRowUserControl x:Name="Row3" />
+        <local:FieldRowUserControl x:Name="Row4" />
+        <local:FieldRowUserControl x:Name="Row5" />
+        <local:FieldRowUserControl x:Name="Row6" />
+        <local:FieldRowUserControl x:Name="Row7" />
+        <local:FieldRowUserControl x:Name="Row8" />
+        <local:FieldRowUserControl x:Name="Row9" />
+    </StackPanel>
+</UserControl>

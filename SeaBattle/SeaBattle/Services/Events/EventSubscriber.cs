@@ -1,5 +1,6 @@
 ﻿using System;
-namespace SeaBattle.Services
+
+namespace SeaBattle.Services.Events
 {
     public class EventSubscriber : IDisposable
     {

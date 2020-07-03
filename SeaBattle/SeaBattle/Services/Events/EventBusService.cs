@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace SeaBattle.Services
+namespace SeaBattle.Services.Events
 {
     public class EventBusService
     {
-        private ConcurrentDictionary<EventSubscriber, Func<IEvent, Task>> _subscibers;
+        private ConcurrentDictionary<EventSubscriber, Func<IEvent, Task>> _subscribers;
 
         public EventBusService()
         {
-            _subscibers = new ConcurrentDictionary<EventSubscriber, Func<IEvent, Task>>();
+            _subscribers = new ConcurrentDictionary<EventSubscriber, Func<IEvent, Task>>();
         }
 
         public IDisposable Subscribe<T>(Func<T, Task> handler) where T : IEvent
         {
-            var disposer = new EventSubscriber(typeof(T), s => _subscibers.TryRemove(s, out var _));
+            var disposer = new EventSubscriber(typeof(T), s => _subscribers.TryRemove(s, out var _));
 
-            _subscibers.TryAdd(disposer, (item) => handler((T)item));
+            _subscribers.TryAdd(disposer, (item) => handler((T)item));
 
             return disposer;
         }
@@ -29,7 +27,7 @@ namespace SeaBattle.Services
         {
             var messageType = typeof(T);
 
-            var handlers = _subscibers
+            var handlers = _subscribers
                 .Where(s => s.Key.MessageType == messageType)
                 .Select(s => s.Value(message));
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SeaBattle.Services
+namespace SeaBattle.Services.Messages
 {
     public class MessageSubscriber : IDisposable
     {

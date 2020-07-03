@@ -1,8 +1,6 @@
 ﻿using DevExpress.Mvvm;
 using SeaBattle.Models;
-using SeaBattle.Services;
-using SeaBattle.Views.Pages;
-using System.Windows.Controls;
+using SeaBattle.Services.Paging;
 
 namespace SeaBattle.ViewModels
 {
@@ -10,13 +8,13 @@ namespace SeaBattle.ViewModels
     {
         private readonly PageService _pageService;
 
-        public Page CurrentPage { get; set; }
+        public PageType CurrentPage { get; set; }
 
         public MainViewModel(PageService pageService)
         {
             _pageService = pageService;
             _pageService.OnPageChanged += (page) => CurrentPage = page;
-            _pageService.ChangePage(new LoginPage());
+            _pageService.ChangePage(PageType.Login);
         }
     }
 }
